@@ -1,5 +1,7 @@
 # Course Examination Details
 
+## Project description (on Moodle)
+
 The final examination for this course will be conducted as a poster session, as it provides a more interactive and collaborative experience.
 
 During the session, you will have the opportunity to:
@@ -60,15 +62,7 @@ Part of this text is generated with Claude ;)
 
 ## idea
 
-text <-> image
-
-text <-> motion
-
-Text ↔ Audio
-
-image <-> image
-
-audio <-> image
+modals
 
 • text
 • image
@@ -79,24 +73,53 @@ audio <-> image
 • sensor data
 
 video -> text
-영상에 대한 댓글을 달아주는 기능
-그 대신 좋아요가 많이 박힐 수 있는
+agent that generates most likable comments
+
+## references
 
 LiveBot: Generating Live Video Comments Based on Visual and Textual Contexts
 https://github.com/lancopku/livebot
-
-댓글 달아서 진짜 좋아요가 많이 박히는지
-
-틱톡이나 유튜브로 하자
-
-댓글 학습을 시키자
-LiveBot: Generating Live Video Comments Based on Visual and Textual Contexts
 https://arxiv.org/abs/2409.15196
+
 VideoIC: A Video Interactive Comments Dataset and Multimodal
+https://dl.acm.org/doi/epdf/10.1145/3394171.3413890
 Multitask Learning for Comments Generation
 
-https://dl.acm.org/doi/epdf/10.1145/3394171.3413890
-
-ViCo: Engaging Video Comment Generation with Human
-Preference Rewards
+ViCo: Engaging Video Comment Generation with Human Preference Rewards
 https://dl.acm.org/doi/epdf/10.1145/3696409.3700260
+
+## Plan
+
+### Dataset
+
+1. Youtube-8M
+
+URL : https://research.google.com/youtube8m/
+
+from Youtube-8M get
+
+- video ID
+- video feature
+- label / category
+
+2. Video ID -> Youtube API
+
+Using Video ID from youtube-8M
+get
+
+- title
+- description
+- comments
+- comments likeCount
+
+3. Dataset
+
+input
+
+- video features
+- title (text)
+- description (text)
+
+output
+
+- top-liked comment(s)
