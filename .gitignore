@@ -1,5 +1,9 @@
 *.pdf
+
+# personal
 namil/
+
+# datasets
 data/
 
 .DS_Store
